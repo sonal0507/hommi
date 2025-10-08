@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <title>Homii</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash" class="screen active" onclick="navigateToIntro()">
+        <div class="splash-content" onclick="navigateToIntro()">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="logo-section" onclick="navigateToIntro()">
+                <h1>Homii</h1>
+                <div class="logo-icon">🏠</div>
+                <p class="tagline">Plan.Build.Connect</p>
+                <p class="tap-continue" onclick="navigateToIntro()">Tap to continue</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro 1: Start with a Simple Plan -->
+    <div id="intro1" class="screen">
+        <div class="intro-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="navigateToSplash()">&lt;</button>
+                <h2>Welcome</h2>
+            </div>
+            <div class="intro-content">
+                <div class="intro-illustration">
+                    <div class="house-path-illustration">
+                        <div class="house-icon">🏠</div>
+                        <div class="path-line">
+                            <div class="path-dot"></div>
+                            <div class="path-dot"></div>
+                            <div class="path-dot"></div>
+                            <div class="path-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Start with a Simple Plan</h2>
+                <p>Homii gives you a guided path — one step at a time — so your dream home never feels out of reach.</p>
+                <div class="intro-navigation">
+                    <div class="page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="btn btn-primary" onclick="navigateToIntro2()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro 2: Connect Everyone Easily -->
+    <div id="intro2" class="screen">
+        <div class="intro-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="intro-content">
+                <div class="back-button-area">
+                    <button class="back-btn" onclick="navigateToIntro1()">&lt;</button>
+                </div>
+                <div class="intro-illustration">
+                    <div class="connect-illustration">
+                        <div class="globe">🌍</div>
+                        <div class="avatars">
+                            <div class="avatar avatar1">👩</div>
+                            <div class="avatar avatar2">👨</div>
+                            <div class="avatar avatar3">👩‍💼</div>
+                        </div>
+                        <div class="chat-bubble">💬</div>
+                        <div class="connection-lines"></div>
+                    </div>
+                </div>
+                <h2>Connect Everyone Easily</h2>
+                <p>Homii keeps your team — architect, contractor, and family — in one place, so nothing gets missed or misheard.</p>
+                <div class="intro-navigation">
+                    <div class="page-dots">
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="btn btn-primary" onclick="navigateToIntroBuild()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Build: Build Without Stress -->
+    <div id="intro-build" class="screen">
+        <div class="intro-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="intro-content">
+                <div class="back-button-area">
+                    <button class="back-btn" onclick="navigateToIntro2()">&lt;</button>
+                </div>
+                <div class="intro-illustration">
+                    <div class="build-illustration">
+                        <div class="construction-site">
+                            <div class="building building1">🏢</div>
+                            <div class="building building2">🏢</div>
+                            <div class="crane">🏧</div>
+                            <div class="hard-hat">🛠️</div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Build Without Stress</h2>
+                <p>Track your home, tasks, and team from anywhere. Record site meetings, get summaries, and track your spending in one place.</p>
+                <div class="intro-navigation">
+                    <div class="page-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                    </div>
+                    <button class="btn btn-primary" onclick="navigateToLogin()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome to Homii Login Screen -->
+    <div id="login" class="screen">
+        <div class="login-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="login-content">
+                <div class="back-button-area">
+                    <button class="back-btn" onclick="showScreen('intro2')">&lt;</button>
+                </div>
+                
+                <div class="welcome-header">
+                    <h2>Welcome to Homii</h2>
+                </div>
+                
+                <div class="login-options">
+                    <button class="btn btn-google" onclick="handleGoogleLogin()">
+                        <span class="google-icon">G</span>
+                        Continue with Google
+                    </button>
+                    
+                    <button class="btn btn-dark" onclick="showOtherOptions()">
+                        See other options
+                    </button>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <div class="email-login">
+                        <input type="email" class="email-input" placeholder="Enter email address" id="welcome-email">
+                        <button class="btn btn-primary" onclick="handleEmailLogin()">Continue with email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Setup Welcome Screen -->
+    <div id="home-setup" class="screen">
+        <div class="home-setup-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="home-setup-content">
+                <div class="back-button-area">
+                    <button class="back-btn" onclick="showScreen('login')">&lt;</button>
+                </div>
+                
+                <div class="home-setup-header">
+                    <h2>Let's setup your home</h2>
+                    <p>Tell us about your dream home so we can help you plan better</p>
+                </div>
+                
+                <div class="home-setup-illustration">
+                    <div class="home-icon-large">🏠</div>
+                    <div class="setup-dots">
+                        <div class="setup-dot active">1</div>
+                        <div class="setup-line"></div>
+                        <div class="setup-dot">2</div>
+                        <div class="setup-line"></div>
+                        <div class="setup-dot">3</div>
+                    </div>
+                </div>
+                
+                <div class="setup-info">
+                    <h3>What we'll cover:</h3>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <span class="info-icon">🏡</span>
+                            <span>Home Details & Layout</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Location & Budget</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📋</span>
+                            <span>Property Audit & Photos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="showScreen('home-details-form')">Let's Start</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Details Form Screen -->
+    <div id="home-details-form" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-setup')">&lt;</button>
+                <h2>Create Project</h2>
+            </div>
+            
+            <div class="form-content">
+                <div class="step-indicator">1/4 Overview</div>
+                <h1 class="main-heading">Give your home a special name!</h1>
+                
+                <form class="project-form" onsubmit="handleStep1(event)">
+                    <input type="text" class="home-name-input" id="home-name-step1" placeholder="Hawa Villa ✨" required>
+                    <p class="example-text">Example: "Dream Nest", "Kaveri Villa"</p>
+                    
+                    <div class="progress-section">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showScreen('home-setup')">Back</button>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 2: Home Details -->
+    <div id="home-details-step2" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-details-form')">&lt;</button>
+                <h2>Create Project</h2>
+            </div>
+            
+            <div class="form-content">
+                <div class="step-indicator">2/4 Overview</div>
+                <h1 class="main-heading">Tell us more about your home</h1>
+                
+                <form class="project-form" onsubmit="handleStep2(event)">
+                    <div class="form-group">
+                        <label>What is your home type?</label>
+                        <select class="form-select" id="home-type-step2" required>
+                            <option value="">Select home type</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="independent-house">Independent House</option>
+                            <option value="duplex">Duplex</option>
+                            <option value="penthouse">Penthouse</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How many bedrooms?</label>
+                        <select class="form-select" id="bedrooms-step2" required>
+                            <option value="">Select bedrooms</option>
+                            <option value="1">1 BHK</option>
+                            <option value="2">2 BHK</option>
+                            <option value="3">3 BHK</option>
+                            <option value="4">4 BHK</option>
+                            <option value="5+">5+ BHK</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How big is your place?</label>
+                        <select class="form-select" id="square-feet-step2" required>
+                            <option value="">Select square footage</option>
+                            <option value="under-500">Under 500 sq ft</option>
+                            <option value="500-1000">500-1000 sq ft</option>
+                            <option value="1000-1500">1000-1500 sq ft</option>
+                            <option value="1500-2000">1500-2000 sq ft</option>
+                            <option value="2000+">2000+ sq ft</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How many bathrooms?</label>
+                        <select class="form-select" id="bathrooms-step2" required>
+                            <option value="">Select bathrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4+">4+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Where is your home located?</label>
+                        <input type="text" class="form-input" id="home-location-step2" placeholder="Enter city or area" required>
+                    </div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showScreen('home-details-form')">Back</button>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 3: Family Invitation -->
+    <div id="home-details-step3" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-details-step2')">&lt;</button>
+                <h2>Create Project</h2>
+            </div>
+            
+            <div class="form-content">
+                <div class="step-indicator">3/4 Overview</div>
+                <h1 class="main-heading">Would you like to invite your family to this project?</h1>
+                <p class="sub-text">Your family members can track progress, add feedback, and stay updated on your home journey.</p>
+                
+                <form class="project-form" onsubmit="handleStep3(event)">
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="family-invite-step3" placeholder="Enter family member's email (optional)">
+                    </div>
+                    
+                    <p class="skip-link" onclick="showScreen('home-details-step4')">Skip for now</p>
+                    
+                    <div class="progress-section">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showScreen('home-details-step2')">Back</button>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 4: Budget -->
+    <div id="home-details-step4" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-details-step3')">&lt;</button>
+                <h2>Create Project</h2>
+            </div>
+            
+            <div class="form-content">
+                <div class="step-indicator">4/4 Overview</div>
+                <h1 class="main-heading">What's your budget range?</h1>
+                <p class="sub-text">This helps us suggest the right professionals and timeline for your project.</p>
+                
+                <form class="project-form" onsubmit="handleStep4(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-input budget-input" id="budget-step4" placeholder="₹25,00,000" required>
+                    </div>
+                    
+                    <p class="alternative-text">Or upload your BOQ (Bill of Quantities)</p>
+                    <input type="file" id="boq-upload" accept=".pdf,.xlsx,.xls" style="display: none;" onchange="handleBOQUpload(this)">
+                    <button type="button" class="btn-upload" onclick="document.getElementById('boq-upload').click()">Upload BOQ File</button>
+                    <div id="boq-status" class="upload-status"></div>
+                    
+                    <div class="progress-section">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showScreen('home-details-step3')">Back</button>
+                        <button type="submit" class="btn btn-primary">Complete Setup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Screen -->
+    <div id="dashboard" class="screen">
+        <div class="dashboard-container">
+            <div class="status-bar">
+                <span class="time">9:41</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="dashboard-header">
+                <button class="back-btn" onclick="showScreen('login')">&lt;</button>
+                <h2>Welcome <span class="user-name" id="dashboard-user-name">User!</span></h2>
+                <div class="header-icons">
+                    <span class="icon">🔔</span>
+                    <span class="icon">💬</span>
+                </div>
+            </div>
+            
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search meetings, people, tasks..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <span class="mic-icon">🎤</span>
+                </div>
+            </div>
+            
+            <div class="build-streak-section">
+                <h3>Your Build Streak</h3>
+                <div class="streak-days">
+                    <div class="day">M<span>1</span></div>
+                    <div class="day">T<span>2</span></div>
+                    <div class="day">W<span>3</span></div>
+                    <div class="day current">T<span>4</span></div>
+                    <div class="day">F<span>5</span></div>
+                    <div class="day">S<span>6</span></div>
+                    <div class="day">S<span>7</span></div>
+                </div>
+            </div>
+            
+            <div class="project-section">
+                <div class="project-header">
+                    <h3><span id="dashboard-home-name">User's Home</span></h3>
+                    <span class="edit-icon">✏️</span>
+                </div>
+                
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=200&fit=crop" alt="Modern living room" class="home-image">
+                </div>
+                
+                <div class="project-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 5%"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span>5%</span>
+                        <span>Phase 1 of 7</span>
+                    </div>
+                </div>
+                
+                <div class="project-stats">
+                    <div class="stat-card">
+                        <h4>Budget Spent</h4>
+                        <div class="budget-chart">
+                            <div class="donut-chart">
+                                <svg width="60" height="60">
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="#e9ecef" stroke-width="5"/>
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="#333" stroke-width="5" stroke-dasharray="0 157" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>₹0L of ₹25L</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Estimated Days</h4>
+                        <p class="days">365 days</p>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" onclick="showScreen('home-pathway')">Go to Phase 1</button>
+            </div>
+            
+            <div class="quick-tools-section">
+                <h3>Quick Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <span class="tool-icon">📍</span>
+                        <span>Track Site Visit</span>
+                    </div>
+                    <div class="tool-card">
+                        <span class="tool-icon">🎥</span>
+                        <span>Record Meeting</span>
+                    </div>
+                    <div class="tool-card" onclick="writeNotes()">
+                        <span class="tool-icon">📝</span>
+                        <span>Write Notes</span>
+                    </div>
+                    <div class="tool-card" onclick="showChatbot()">
+                        <span class="tool-icon">🤖</span>
+                        <span>AI Assistant</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <button class="nav-btn active" onclick="showScreen('dashboard')">🏠 Home</button>
+                <button class="nav-btn" onclick="showScreen('home-pathway')">🚩 Pathway</button>
+                <button class="nav-btn">📋 Track</button>
+                <button class="nav-btn">➕ More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Pathway Screen -->
+    <div id="home-pathway" class="screen">
+        <div class="pathway-container">
+            <div class="status-bar">
+                <span class="time">9:41</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="pathway-header">
+                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
+                <h2>Home Pathway</h2>
+                <div class="header-icons">
+                    <span class="icon">🔍</span>
+                    <span class="icon">💬</span>
+                </div>
+            </div>
+            
+            <div class="pathway-phases">
+                <div class="phase-tabs">
+                    <button class="phase-tab active" onclick="selectPhase(1)">Phase 1</button>
+                    <button class="phase-tab" onclick="selectPhase(2)">Phase 2</button>
+                    <button class="phase-tab" onclick="selectPhase(3)">Phase 3</button>
+                    <button class="phase-tab" onclick="selectPhase(4)">Phase 4</button>
+                    <button class="phase-tab" onclick="selectPhase(5)">Phase 5</button>
+                    <button class="phase-tab" onclick="selectPhase(6)">Phase 6</button>
+                    <button class="phase-tab" onclick="selectPhase(7)">Phase 7</button>
+                </div>
+                
+                <div class="phase-content">
+                    <div class="phase-info">
+                        <h3>Phase 1: Foundation & Planning</h3>
+                        <p>Establish the groundwork for your dream home</p>
+                        <div class="phase-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="progress-text">20% Complete</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pathway-steps">
+                        <div class="step completed">
+                            <div class="step-marker">
+                                <span class="step-number">✓</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Project Setup</h4>
+                                <p>Basic project information and requirements</p>
+                                <span class="step-status">Completed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="step pending" onclick="showScreen('site-survey')">
+                            <div class="step-marker">
+                                <span class="step-number">2</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Site Survey</h4>
+                                <p>Professional site measurement and documentation</p>
+                                <span class="step-status">Pending</span>
+                            </div>
+                        </div>
+                        
+                        <div class="step" onclick="showScreen('architect-listing')">
+                            <div class="step-marker">
+                                <span class="step-number">3</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Find Architect</h4>
+                                <p>Connect with qualified architects</p>
+                                <span class="step-status">Pending</span>
+                            </div>
+                        </div>
+                        
+                        <div class="step" onclick="goToDesignBrief()">
+                            <div class="step-marker">
+                                <span class="step-number">4</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Design Brief</h4>
+                                <p>Define your vision and requirements</p>
+                                <span class="step-status">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <button class="nav-btn" onclick="showScreen('dashboard')">🏠 Home</button>
+                <button class="nav-btn active" onclick="showScreen('home-pathway')">🚩 Pathway</button>
+                <button class="nav-btn">📋 Track</button>
+                <button class="nav-btn">➕ More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Survey Photo Upload Screen -->
+    <div id="site-survey" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-pathway')">&lt;</button>
+                <h2>Property Audit</h2>
+                <div class="header-icons">
+                    <span class="icon">🔔</span>
+                    <span class="icon">💬</span>
+                </div>
+            </div>
+            
+            <div class="form-content">
+                <div class="step-indicator">PHASE 2 | STEP 2/4</div>
+                
+                <div class="audit-steps">
+                    <div class="audit-step active">1<br>Site Photos</div>
+                    <div class="audit-step">2<br>Identify Changes</div>
+                    <div class="audit-step">3<br>Upload drawings</div>
+                </div>
+                
+                <div class="people-involved">
+                    <h4>People involved</h4>
+                    <div class="people-chips">
+                        <span class="person-chip">👥 Home Owners</span>
+                        <span class="person-chip">👨‍👩‍👧‍👦 Family members</span>
+                    </div>
+                    <div class="timeline">
+                        <span>Start: Dec 29 | Est. Completion: Feb 15</span>
+                    </div>
+                </div>
+                
+                <div class="conduct-photos">
+                    <h3>Conduct Site Photos</h3>
+                    <p>Click photos of every corner — walls, ceilings, windows, bathrooms. Use our camera to tag rooms, add voice notes, or write reminders.</p>
+                    
+                    <div class="photo-upload-area" id="photo-upload-area">
+                        <div class="upload-placeholder" onclick="openPhotoOptions()">
+                            <div class="upload-icon">📷</div>
+                            <p><strong>+ ADD PHOTOS</strong></p>
+                            <p>Camera / Gallery Options</p>
+                        </div>
+                        
+                        <div class="photo-status" id="photo-status">
+                            <span id="photo-count">0 Photos Uploaded</span>
+                            <span id="sync-status">📤 Ready to sync</span>
+                        </div>
+                        
+                        <div class="photo-grid" id="photo-grid">
+                            <!-- Photos will be dynamically added here -->
+                        </div>
+                    </div>
+                    
+                    <div class="why-photos">
+                        <h4>💡 Why to click site photos?</h4>
+                        <p>Site photos help architects understand your space better, identify potential issues early, and create more accurate designs tailored to your property's unique characteristics.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="showScreen('home-pathway')">Back</button>
+                <button type="button" class="btn btn-primary" onclick="goToNext()" id="next-btn" disabled>Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Capture Modal -->
+    <div id="photo-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Photo</h3>
+                <span class="close" onclick="closePhotoModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="photo-options">
+                    <button class="photo-option-btn" onclick="takePhoto()">
+                        <span class="option-icon">📷</span>
+                        Take Photo with Camera
+                    </button>
+                    <button class="photo-option-btn" onclick="selectFromGallery()">
+                        <span class="option-icon">🖼️</span>
+                        Choose from Gallery
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Detail Modal -->
+    <div id="photo-detail-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Photo Details</h3>
+                <span class="close" onclick="closePhotoDetailModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="photo-preview" id="photo-preview">
+                    <!-- Photo will be displayed here -->
+                </div>
+                <div class="photo-metadata">
+                    <div class="form-group">
+                        <label>Room/Area Tag</label>
+                        <select class="form-select" id="room-tag">
+                            <option value="">Select room/area</option>
+                            <option value="living-room">Living Room</option>
+                            <option value="kitchen">Kitchen</option>
+                            <option value="bedroom-1">Bedroom 1</option>
+                            <option value="bedroom-2">Bedroom 2</option>
+                            <option value="bathroom">Bathroom</option>
+                            <option value="exterior">Exterior</option>
+                            <option value="ceiling">Ceiling</option>
+                            <option value="wall">Wall</option>
+                            <option value="floor">Floor</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Notes/Reminders</label>
+                        <textarea class="form-input" id="photo-notes" placeholder="Add any notes or reminders about this photo..."></textarea>
+                    </div>
+                    <div class="voice-note-section">
+                        <button type="button" class="btn btn-outline" onclick="toggleVoiceRecording()">
+                            <span id="voice-icon">🎤</span> <span id="voice-text">Add Voice Note</span>
+                        </button>
+                        <div id="voice-status"></div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closePhotoDetailModal()">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="savePhotoDetails()">Save Photo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Find Architect Intro Screen -->
+    <div id="find-architect-intro" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-pathway')">&lt;</button>
+                <h2>Find Architect</h2>
+                <div class="header-icons">
+                    <span class="icon">🔔</span>
+                    <span class="icon">💬</span>
+                </div>
+            </div>
+            
+            <div class="form-content">
+                <div class="architect-intro">
+                    <div class="architect-hero">
+                        <div class="hero-illustration">
+                            <div class="house-design">🏗️</div>
+                            <div class="architects">👨‍💼👩‍💼</div>
+                        </div>
+                        <h1>Time for Design!</h1>
+                        <p>Connect with experienced architects who understand Indian building practices and can bring your vision to life.</p>
+                    </div>
+                    
+                    <div class="intro-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✨</span>
+                            <span>Verified & experienced professionals</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🏠</span>
+                            <span>Specializing in Indian home designs</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💬</span>
+                            <span>Direct communication & collaboration</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⭐</span>
+                            <span>Ratings & reviews from real clients</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="showScreen('architect-listing')">Let's Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Architect Listing Screen -->
+    <div id="architect-listing" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('find-architect-intro')">&lt;</button>
+                <h2>Find Professionals</h2>
+            </div>
+            
+            <div class="form-content">
+                <div class="professional-tabs">
+                    <button class="tab-btn active" onclick="selectProfessionalTab('architects')">Architects</button>
+                    <button class="tab-btn" onclick="selectProfessionalTab('contractors')">Contractors</button>
+                    <button class="tab-btn" onclick="selectProfessionalTab('suppliers')">Suppliers</button>
+                </div>
+                
+                <div class="search-filter-section">
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Search by Name, City, or Specialty" id="architect-search">
+                        <span class="search-icon">🔍</span>
+                        <span class="mic-icon">🎤</span>
+                    </div>
+                    <button class="filter-btn" onclick="showFilterModal()">
+                        <span>🔽</span> Filter
+                    </button>
+                </div>
+                
+                <div class="active-filters" id="active-filters">
+                    <span class="filter-chip">Modern Design - Pune <span onclick="removeFilter(this)">×</span></span>
+                    <span class="filter-chip">Budget: ₹50K-1L <span onclick="removeFilter(this)">×</span></span>
+                </div>
+                
+                <div class="professionals-list" id="professionals-list">
+                    <!-- Architect cards will be dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div id="filter-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Filter Architects</h3>
+                <span class="close" onclick="closeFilterModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="filter-section">
+                    <h4>Location</h4>
+                    <input type="text" class="form-input" placeholder="Enter city or area" id="location-filter">
+                    <div class="radius-section">
+                        <label>Radius: <span id="radius-value">25</span> km</label>
+                        <input type="range" class="radius-slider" min="5" max="100" value="25" id="radius-slider" oninput="updateRadiusValue(this.value)">
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Experience Level</h4>
+                    <div class="experience-options">
+                        <label class="filter-option">
+                            <input type="radio" name="experience" value="entry"> Entry Level (0-2 years)
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="experience" value="mid"> Mid Level (3-7 years)
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="experience" value="senior"> Senior Level (8+ years)
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Architecture Style</h4>
+                    <div class="style-options">
+                        <button class="style-btn" onclick="toggleStyle(this)">Modern</button>
+                        <button class="style-btn" onclick="toggleStyle(this)">Traditional</button>
+                        <button class="style-btn" onclick="toggleStyle(this)">Contemporary</button>
+                        <button class="style-btn" onclick="toggleStyle(this)">Minimalist</button>
+                        <button class="style-btn" onclick="toggleStyle(this)">Colonial</button>
+                        <button class="style-btn" onclick="toggleStyle(this)">Sustainable</button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Budget Range (Architect Fees)</h4>
+                    <div class="budget-options">
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="under-50k"> Under ₹50,000
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="50k-150k"> ₹50,000 - ₹1,50,000
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="150k-300k"> ₹1,50,000 - ₹3,00,000
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="budget" value="above-300k"> Above ₹3,00,000
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" onclick="resetFilters()">Reset</button>
+                <button type="button" class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Architect Profile Screen -->
+    <div id="architect-profile" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('architect-listing')">&lt;</button>
+                <h2>Architect Profile</h2>
+                <div class="header-icons">
+                    <span class="icon">📤</span>
+                    <span class="icon">💬</span>
+                </div>
+            </div>
+            
+            <div class="form-content" id="architect-profile-content">
+                <!-- Profile content will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Shortlist Screen -->
+    <div id="shortlist" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('architect-listing')">&lt;</button>
+                <h2>My Shortlist</h2>
+            </div>
+            
+            <div class="form-content">
+                <div class="shortlist-content" id="shortlist-content">
+                    <!-- Shortlisted architects will be populated here -->
+                </div>
+                
+                <div class="shortlist-actions" id="shortlist-actions" style="display: none;">
+                    <button class="btn btn-outline" onclick="compareShortlisted()">Compare Selected</button>
+                    <button class="btn btn-primary" onclick="contactShortlisted()">Contact All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Write Notes Screen -->
+    <div id="write-notes" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
+                <h2>Write Notes</h2>
+                <div class="header-icons">
+                    <span class="icon" onclick="loadNotesList(); showScreen('notes-list')">📜</span>
+                </div>
+            </div>
+            
+            <div class="form-content">
+                <h1 class="main-heading">Capture your thoughts</h1>
+                <p class="sub-text">Write down ideas, reminders, or important details about your project</p>
+                
+                <form class="project-form" onsubmit="event.preventDefault(); saveNote();">
+                    <div class="form-group">
+                        <label>Note Title</label>
+                        <input type="text" class="form-input" id="note-title" placeholder="Enter note title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Notes</label>
+                        <textarea class="form-input" id="note-content" placeholder="Write your thoughts here..." rows="8" required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showScreen('dashboard')">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Note</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notes List Screen -->
+    <div id="notes-list" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('write-notes')">&lt;</button>
+                <h2>My Notes</h2>
+                <div class="header-icons">
+                    <span class="icon" onclick="showScreen('write-notes')">+</span>
+                </div>
+            </div>
+            
+            <div class="form-content">
+                <div id="notes-list-container">
+                    <div id="notes-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Design Brief Screen -->
+    <div id="design-brief" class="screen">
+        <div class="create-project-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('home-pathway')">&lt;</button>
+                <h2>Design Brief</h2>
+            </div>
+            
+            <div class="form-content">
+                <h1 class="main-heading">Define Your Vision</h1>
+                <p class="sub-text">Help us understand your style preferences and requirements</p>
+                
+                <form class="project-form">
+                    <div class="form-group">
+                        <label>Preferred Design Style</label>
+                        <select class="form-select" required>
+                            <option value="">Select your preferred style</option>
+                            <option value="modern">Modern</option>
+                            <option value="traditional">Traditional</option>
+                            <option value="contemporary">Contemporary</option>
+                            <option value="minimalist">Minimalist</option>
+                            <option value="rustic">Rustic</option>
+                            <option value="scandinavian">Scandinavian</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Color Preferences</label>
+                        <select class="form-select" required>
+                            <option value="">Select color palette</option>
+                            <option value="neutral">Neutral (Whites, Grays, Beiges)</option>
+                            <option value="warm">Warm (Earth tones, Browns)</option>
+                            <option value="cool">Cool (Blues, Greens)</option>
+                            <option value="bold">Bold (Bright colors)</option>
+                            <option value="mixed">Mixed palette</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Special Requirements</label>
+                        <textarea class="form-input" placeholder="Any specific requirements, accessibility needs, or special features..." rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Priority Areas</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="kitchen"> Kitchen
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="master-bedroom"> Master Bedroom
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="living-room"> Living Room
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="bathrooms"> Bathrooms
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showScreen('home-pathway')">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="showToast('Design brief saved!'); showScreen('home-pathway');">Save & Continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chatbot Screen -->
+    <div id="ai-chatbot-screen" class="screen">
+        <div class="chat-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
+                <h2>🤖 AI Assistant</h2>
+                <div class="header-actions">
+                    <button class="icon-btn">⚙️</button>
+                </div>
+            </div>
+            
+            <div class="chat-content">
+                <div class="chat-header">
+                    <div class="ai-avatar">🏠</div>
+                    <div class="ai-info">
+                        <h3>Homii AI Assistant</h3>
+                        <p class="ai-status">🟢 Online - Ready to help</p>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                
+                <div class="quick-suggestions">
+                    <div class="suggestion-chips">
+                        <button class="suggestion-chip" onclick="document.getElementById('chat-input').value='Show me architects near Mumbai'; sendMessage();">
+                            🏗️ Find Architects
+                        </button>
+                        <button class="suggestion-chip" onclick="document.getElementById('chat-input').value='Who can help with cupboard design?'; sendMessage();">
+                            🪑 Cupboard Help
+                        </button>
+                        <button class="suggestion-chip" onclick="document.getElementById('chat-input').value='Budget for kitchen renovation'; sendMessage();">
+                            💰 Budget Planning
+                        </button>
+                        <button class="suggestion-chip" onclick="document.getElementById('chat-input').value='Tips for bathroom design'; sendMessage();">
+                            🛁 Design Tips
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <div class="input-container">
+                    <input type="text" 
+                           id="chat-input" 
+                           placeholder="Ask me about architects, carpenters, planning..." 
+                           onkeypress="handleChatInputKeyPress(event)">
+                    <button class="voice-btn" id="voice-btn" onclick="toggleVoiceRecognition()">
+                        <span id="voice-icon">🎤</span>
+                    </button>
+                    <button class="language-btn" id="language-btn" onclick="toggleLanguage()">
+                        <span id="language-text">EN</span>
+                    </button>
+                    <button class="send-btn" onclick="sendChatMessage()">
+                        <span>➤</span>
+                    </button>
+                </div>
+                <div class="input-suggestions">
+                    <small id="input-suggestions-text">💡 Try: "Find plumbers in Pune", "Cupboard design ideas", "Budget for 2BHK"</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="camera-input" accept="image/*" capture="camera" style="display: none;" onchange="handlePhotoCapture(this)">
+    <input type="file" id="gallery-input" accept="image/*" multiple style="display: none;" onchange="handlePhotoCapture(this)">
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
