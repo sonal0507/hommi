@@ -452,795 +452,9 @@
         </div>
     </div>
 
-    <!-- Dashboard Screen - Home Pathway -->
+    <!-- Dashboard Screen -->
     <div id="dashboard" class="screen">
         <div class="dashboard-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="pathway-header">
-                <h2>Home Pathway</h2>
-                <div class="header-icons">
-                    <span class="icon" onclick="navigateToNotifications()">🔔</span>
-                    <span class="icon" onclick="navigateToChat()">💬</span>
-                </div>
-            </div>
-            
-            <!-- Project Overview Card -->
-            <div class="project-overview-card">
-                <div class="project-title">
-                    <div class="home-icon">🏠</div>
-                    <h3><span class="user-name">Arjun's</span> Home</h3>
-                </div>
-                <div class="progress-section">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 5%"></div>
-                    </div>
-                    <div class="progress-text">5%</div>
-                    <div class="phase-indicator">Phase 1 of 7</div>
-                </div>
-                <div class="project-icon">🏡</div>
-            </div>
-            
-            <!-- Phase Navigation -->
-            <div class="phase-navigation">
-                <button class="phase-tab active" onclick="switchPhase(1)">PHASE 1</button>
-                <button class="phase-tab" onclick="switchPhase(2)">PHASE 2</button>
-                <button class="phase-tab" onclick="switchPhase(3)">PHASE 3</button>
-                <button class="phase-tab" onclick="switchPhase(4)">PH...</button>
-            </div>
-            
-            <!-- Current Phase Content -->
-            <div class="phase-content">
-                <div class="phase-header">
-                    <h3>Project Setup and Clarity</h3>
-                    <p>Getting ready to start your dream home</p>
-                </div>
-                
-                <div class="phase-stats">
-                    <div class="stat-item">
-                        <div class="stat-icon">⏰</div>
-                        <span>2-3 weeks</span>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">💰</div>
-                        <span>1-3 Lakhs</span>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">📝</div>
-                        <span>4 Steps</span>
-                    </div>
-                </div>
-                
-                <!-- Task Timeline -->
-                <div class="task-timeline">
-                    <div class="timeline-item completed" onclick="showTaskDetails('define-goal')">
-                        <div class="timeline-status">
-                            <div class="status-icon completed">✓</div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="task-content">
-                            <div class="task-image">📋</div>
-                            <div class="task-info">
-                                <h4>Define Goal & Scope</h4>
-                                <p>Getting ready to start your dream home</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item current" onclick="navigateToPropertyAudit()">
-                        <div class="timeline-status">
-                            <div class="status-icon current">•</div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="task-content">
-                            <div class="task-image">📸</div>
-                            <div class="task-info">
-                                <h4>Property Audit</h4>
-                                <p>Document current state of your property</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item pending" onclick="showTaskDetails('architect-onboarding')">
-                        <div class="timeline-status">
-                            <div class="status-icon pending">-</div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="task-content">
-                            <div class="task-image">👨‍💼</div>
-                            <div class="task-info">
-                                <h4>Architect Onboarding</h4>
-                                <p>Find and connect with your architect</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item pending" onclick="showTaskDetails('design-development')">
-                        <div class="timeline-status">
-                            <div class="status-icon pending">-</div>
-                        </div>
-                        <div class="task-content">
-                            <div class="task-image">📐</div>
-                            <div class="task-info">
-                                <h4>Design Development</h4>
-                                <p>Create your home's design plans</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- AI Assistant Float Button -->
-            <div class="ai-assistant-float" onclick="showAIAssistant()">
-                <div class="ai-icon">🤖</div>
-            </div>
-            
-            <!-- Bottom Navigation -->
-            <div class="bottom-nav">
-                <button class="nav-btn active">
-                    <div class="nav-icon">🏠</div>
-                    <span>Home</span>
-                </button>
-                <button class="nav-btn" onclick="navigateToPathway()">
-                    <div class="nav-icon">🛣️</div>
-                    <span>Pathway</span>
-                </button>
-                <button class="nav-btn" onclick="navigateToTrack()">
-                    <div class="nav-icon">📊</div>
-                    <span>Track</span>
-                </button>
-                <button class="nav-btn" onclick="navigateToMore()">
-                    <div class="nav-icon">➕</div>
-                    <span>More</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Property Audit Phase 2 Screen -->
-    <div id="property-audit" class="screen">
-        <div class="property-audit-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="audit-header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>Property Audit</h2>
-                <div class="header-icons">
-                    <span class="icon">🔔</span>
-                    <span class="icon">💬</span>
-                </div>
-            </div>
-            
-            <div class="progress-indicator">
-                <span>PHASE 2 | STEP 2/4</span>
-            </div>
-            
-            <div class="step-navigation">
-                <div class="step-item completed">
-                    <span class="step-number">1</span>
-                    <span class="step-label">Site Photos</span>
-                </div>
-                <div class="step-item active">
-                    <span class="step-number">2</span>
-                    <span class="step-label">Identify Changes</span>
-                </div>
-                <div class="step-item">
-                    <span class="step-number">3</span>
-                    <span class="step-label">Upload drawings</span>
-                </div>
-            </div>
-            
-            <div class="people-involved">
-                <h3>People involved</h3>
-                <div class="people-tags">
-                    <div class="people-tag">
-                        <div class="avatar">👤</div>
-                        <span>Home Owners</span>
-                    </div>
-                    <div class="people-tag">
-                        <div class="avatar">👥</div>
-                        <span>Family members</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="audit-task">
-                <h3>Conduct Site Photos</h3>
-                <p>Capture every corner — walls, ceilings, windows, bathrooms. Use our camera to tag rooms, add voice notes, or write reminders.</p>
-                
-                <div class="task-timeline">
-                    <div class="timeline-info">
-                        <span class="start-date">Start 23 April 2023</span>
-                        <span class="completion-date">Est. Completion 16 July 2023</span>
-                    </div>
-                </div>
-                
-                <div class="photo-gallery">
-                    <div class="photo-item" onclick="openCamera()">
-                        <div class="add-photo">📷</div>
-                        <span>Add Photo</span>
-                    </div>
-                    <div class="photo-preview">
-                        <img src="https://via.placeholder.com/150x100?text=Room+1" alt="Room 1">
-                    </div>
-                    <div class="photo-preview">
-                        <img src="https://via.placeholder.com/150x100?text=Room+2" alt="Room 2">
-                    </div>
-                </div>
-                
-                <div class="help-link">
-                    <span onclick="showPhotoHelp()">❓ Why to click site photos?</span>
-                </div>
-            </div>
-            
-            <div class="audit-actions">
-                <button class="btn btn-secondary" onclick="showScreen('dashboard')">Back</button>
-                <button class="btn btn-primary" onclick="navigateToIdentifyChanges()">Next</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Find Professionals Screen -->
-    <div id="find-professionals" class="screen">
-        <div class="find-professionals-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="professionals-header">
-                <h2>Find Professionals</h2>
-                <div class="header-icons">
-                    <span class="icon">🔔</span>
-                    <span class="icon">👤</span>
-                </div>
-            </div>
-            
-            <div class="category-tabs">
-                <button class="category-tab active" onclick="switchCategory('architects')">Architects</button>
-                <button class="category-tab" onclick="switchCategory('contractors')">Contractors</button>
-                <button class="category-tab" onclick="switchCategory('suppliers')">Suppliers</button>
-            </div>
-            
-            <div class="search-section">
-                <div class="search-bar">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search by Name, City, or Specialty">
-                    <span class="voice-icon" onclick="startVoiceSearch()">🎤</span>
-                </div>
-            </div>
-            
-            <div class="filter-section">
-                <button class="filter-btn" onclick="showScreen('filter-architects')">
-                    <span class="filter-icon">⚗️</span>
-                    Filter
-                </button>
-                <div class="active-filters">
-                    <span class="filter-tag">Modern Design - Pune <span onclick="removeFilter(this)">×</span></span>
-                    <span class="filter-tag">Budget: ₹50K-1L <span onclick="removeFilter(this)">×</span></span>
-                </div>
-            </div>
-            
-            <div class="professionals-list">
-                <div class="professional-card" onclick="showScreen('professional-details')">
-                    <div class="professional-avatar">
-                        <img src="https://via.placeholder.com/60x60?text=RB" alt="Rahul Bose">
-                    </div>
-                    <div class="professional-info">
-                        <h4>Rahul Bose</h4>
-                        <p class="location">📍 Mumbai, India • 2.6 km</p>
-                        <p class="rating">⭐ 4.9 • 12 reviews</p>
-                        <p class="description">Passionate about creating homes that are...</p>
-                    </div>
-                    <div class="professional-actions">
-                        <button class="btn btn-outline" onclick="shortlistProfessional('rahul-bose')">Shortlist</button>
-                        <button class="btn btn-primary" onclick="viewWork('rahul-bose')">View work</button>
-                    </div>
-                </div>
-                
-                <div class="professional-card" onclick="showScreen('professional-details')">
-                    <div class="professional-avatar">
-                        <img src="https://via.placeholder.com/60x60?text=SP" alt="Shrikanth Patil">
-                    </div>
-                    <div class="professional-info">
-                        <h4>Shrikanth Patil</h4>
-                        <p class="location">📍 Pune, India • 5.2 km</p>
-                        <p class="rating">⭐ 4.7 • 8 reviews</p>
-                        <p class="description">Specialist in sustainable architecture...</p>
-                    </div>
-                    <div class="professional-actions">
-                        <button class="btn btn-outline" onclick="shortlistProfessional('shrikanth-patil')">Shortlist</button>
-                        <button class="btn btn-primary" onclick="viewWork('shrikanth-patil')">View work</button>
-                    </div>
-                </div>
-                
-                <div class="professional-card" onclick="showScreen('professional-details')">
-                    <div class="professional-avatar">
-                        <img src="https://via.placeholder.com/60x60?text=AS" alt="Ari Sejal">
-                    </div>
-                    <div class="professional-info">
-                        <h4>Ari Sejal</h4>
-                        <p class="location">📍 Mumbai, India • 3.1 km</p>
-                        <p class="rating">⭐ 4.8 • 15 reviews</p>
-                        <p class="description">Modern design with traditional touch...</p>
-                    </div>
-                    <div class="professional-actions">
-                        <button class="btn btn-outline" onclick="shortlistProfessional('ari-sejal')">Shortlist</button>
-                        <button class="btn btn-primary" onclick="viewWork('ari-sejal')">View work</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Professional Details Screen -->
-    <div id="professional-details" class="screen">
-        <div class="professional-details-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="details-header">
-                <button class="back-btn" onclick="showScreen('find-professionals')">&lt;</button>
-                <div class="header-actions">
-                    <span class="icon">📤</span>
-                    <span class="icon">⋯</span>
-                </div>
-            </div>
-            
-            <div class="professional-profile">
-                <div class="profile-main">
-                    <div class="profile-avatar">
-                        <img src="https://via.placeholder.com/80x80?text=RB" alt="Rahul Bose">
-                        <div class="verified-badge">✓ Verified</div>
-                    </div>
-                    <h3>Rahul Bose</h3>
-                    <p class="profession">Licensed Architect</p>
-                    <p class="location">📍 Mumbai</p>
-                    <p class="rating">⭐ 4.9 • 12 reviews</p>
-                    <p class="tagline">Sustainable and Cost-Effective Solutions</p>
-                </div>
-                
-                <div class="profile-stats">
-                    <div class="stat-item">
-                        <span class="stat-value">8+</span>
-                        <span class="stat-label">Years</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value">₹80K-₹5L</span>
-                        <span class="stat-label">Price Range</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value">Available</span>
-                        <span class="stat-label">Next 2 weeks</span>
-                    </div>
-                </div>
-                
-                <div class="social-proof">
-                    <p>Worked for Prashant + 2 more from your contacts</p>
-                </div>
-                
-                <div class="action-buttons">
-                    <button class="btn btn-outline" onclick="contactProfessional()">Contact</button>
-                    <button class="btn btn-primary" onclick="shortlistProfessional()">Shortlist</button>
-                </div>
-            </div>
-            
-            <div class="profile-tabs">
-                <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
-                <button class="tab-btn" onclick="switchTab('projects')">Projects</button>
-                <button class="tab-btn" onclick="switchTab('reviews')">Reviews</button>
-            </div>
-            
-            <div class="tab-content">
-                <div id="overview-tab" class="tab-panel active">
-                    <div class="about-section">
-                        <h4>About</h4>
-                        <p>I'm passionate about creating homes that are not just beautiful, but also sustainable and cost-effective. With over 8 years of experience in residential architecture, I specialize in modern designs that incorporate eco-friendly materials and energy-efficient solutions.</p>
-                    </div>
-                    
-                    <div class="expertise-section">
-                        <h4>Area of Expertise</h4>
-                        <div class="expertise-tags">
-                            <span class="expertise-tag">Modern Design</span>
-                            <span class="expertise-tag">Sustainable Architecture</span>
-                            <span class="expertise-tag">Renovations</span>
-                            <span class="expertise-tag">New Builds</span>
-                            <span class="expertise-tag">Residential</span>
-                        </div>
-                    </div>
-                    
-                    <div class="awards-section">
-                        <h4>Awards & Recognition</h4>
-                        <div class="award-item">
-                            <span class="award-icon">🏆</span>
-                            <div class="award-info">
-                                <h5>AIA Design Excellence Award</h5>
-                                <p>2023 - Sustainable Residential Project</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Filter Architects Screen -->
-    <div id="filter-architects" class="screen">
-        <div class="filter-architects-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="filter-header">
-                <button class="back-btn" onclick="showScreen('find-professionals')">&lt;</button>
-                <h2>Filter Architects</h2>
-                <button class="reset-btn" onclick="resetFilters()">Reset</button>
-            </div>
-            
-            <div class="filter-content">
-                <div class="filter-section">
-                    <h3>Location</h3>
-                    <div class="location-input">
-                        <input type="text" placeholder="Enter city or area" class="location-field">
-                        <span class="location-icon">📍</span>
-                    </div>
-                    <div class="radius-control">
-                        <span>Radius</span>
-                        <input type="range" min="5" max="50" value="25" class="radius-slider">
-                        <span class="radius-value">25 km</span>
-                    </div>
-                </div>
-                
-                <div class="filter-section">
-                    <h3>Experience Level</h3>
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input type="checkbox"> Entry Level (0-2 years)
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" checked> Mid Level (3-7 years)
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox"> Senior Level (8-15 years)
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox"> Expert (15+ years)
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="filter-section">
-                    <h3>Architecture Style</h3>
-                    <div class="style-tags">
-                        <button class="style-tag active">Modern</button>
-                        <button class="style-tag">Traditional</button>
-                        <button class="style-tag">Contemporary</button>
-                        <button class="style-tag">Minimalist</button>
-                        <button class="style-tag">Industrial</button>
-                        <button class="style-tag">Classical</button>
-                    </div>
-                </div>
-                
-                <div class="filter-section">
-                    <h3>Budget Range</h3>
-                    <div class="radio-group">
-                        <label class="radio-item">
-                            <input type="radio" name="budget"> Under 50,000/-
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="budget" checked> 50,000 - 150,000/-
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="budget"> 150,000 - 500,000/-
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="budget"> 500,000+
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="filter-section">
-                    <h3>Languages Spoken</h3>
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input type="checkbox" checked> English
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" checked> Hindi
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox"> Marathi
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox"> Tamil
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="filter-actions">
-                <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- AI Assistant Screen -->
-    <div id="ai-assistant" class="screen">
-        <div class="ai-assistant-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="ai-header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>AI Assistant</h2>
-                <div class="header-actions">
-                    <button class="notes-btn" onclick="toggleNotes()">📝 Take Notes</button>
-                </div>
-            </div>
-            
-            <div class="ai-chat-container">
-                <div class="welcome-message">
-                    <div class="ai-avatar">🤖</div>
-                    <div class="message-content">
-                        <h3>Hi! I'm your Homii AI Assistant</h3>
-                        <p>I'm here to help you plan, build, and connect with the right professionals for your dream home. Ask me anything about:</p>
-                        <ul>
-                            <li>🎨 Interior design and painting</li>
-                            <li>🔨 Carpentry and construction</li>
-                            <li>🏗️ Architecture and planning</li>
-                            <li>💰 Budget planning and cost estimation</li>
-                            <li>👥 Finding the right professionals</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="chat-messages" id="aiChatMessages">
-                    <!-- Chat messages will be dynamically added here -->
-                </div>
-                
-                <div class="quick-suggestions">
-                    <button class="suggestion-btn" onclick="askAI('I need to paint my house')">🎨 I need to paint my house</button>
-                    <button class="suggestion-btn" onclick="askAI('Find me a carpenter')">🔨 Find me a carpenter</button>
-                    <button class="suggestion-btn" onclick="askAI('What should my budget be?')">💰 What should my budget be?</button>
-                    <button class="suggestion-btn" onclick="askAI('Help me plan my home renovation')">📋 Help me plan my home renovation</button>
-                </div>
-            </div>
-            
-            <div class="ai-input-section">
-                <div class="input-container">
-                    <input type="text" id="aiMessageInput" placeholder="Type your message or press mic for voice input..." class="ai-input">
-                    <button class="voice-btn" onclick="startVoiceInput()" id="voiceBtn">🎤</button>
-                    <button class="send-btn" onclick="sendAIMessage()" id="sendBtn">➤</button>
-                </div>
-            </div>
-            
-            <!-- Notes Panel -->
-            <div class="notes-panel" id="notesPanel" style="display: none;">
-                <div class="notes-header">
-                    <h4>📝 Notes</h4>
-                    <button onclick="toggleNotes()">×</button>
-                </div>
-                <textarea placeholder="Take notes during your conversation..." id="notesArea"></textarea>
-                <button class="btn btn-primary" onclick="saveNotes()">Save Notes</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Track Screen -->
-    <div id="track" class="screen">
-        <div class="track-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="track-header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>Track Progress</h2>
-                <div class="header-icons">
-                    <span class="icon">🔔</span>
-                    <span class="icon">⚙️</span>
-                </div>
-            </div>
-            
-            <div class="track-content">
-                <div class="project-summary">
-                    <h3>Arjun's Home Project</h3>
-                    <div class="overall-progress">
-                        <div class="progress-circle">
-                            <span class="progress-text">5%</span>
-                        </div>
-                        <div class="progress-details">
-                            <p>Phase 1 of 7 • 2 weeks elapsed</p>
-                            <p>Budget: ₹1.2L used of ₹25L</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-section">
-                    <h4>Your Team</h4>
-                    <div class="team-members">
-                        <div class="team-member">
-                            <img src="https://via.placeholder.com/40x40?text=RB" alt="Rahul Bose">
-                            <div class="member-info">
-                                <h5>Rahul Bose</h5>
-                                <p>Architect</p>
-                            </div>
-                            <span class="status online">🟢</span>
-                        </div>
-                        <div class="team-member">
-                            <img src="https://via.placeholder.com/40x40?text=PM" alt="Project Manager">
-                            <div class="member-info">
-                                <h5>Project Manager</h5>
-                                <p>Coordination</p>
-                            </div>
-                            <span class="status">⚫</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="budget-breakdown">
-                    <h4>Budget Breakdown</h4>
-                    <div class="budget-items">
-                        <div class="budget-item">
-                            <span class="category">Property Audit</span>
-                            <span class="amount">₹15,000</span>
-                        </div>
-                        <div class="budget-item">
-                            <span class="category">Architect Consultation</span>
-                            <span class="amount">₹25,000</span>
-                        </div>
-                        <div class="budget-item">
-                            <span class="category">Design Development</span>
-                            <span class="amount">₹80,000</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="recent-activity">
-                    <h4>Recent Activity</h4>
-                    <div class="activity-timeline">
-                        <div class="activity-item">
-                            <div class="activity-icon">📸</div>
-                            <div class="activity-content">
-                                <p>Site photos uploaded</p>
-                                <span class="activity-time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon">✅</div>
-                            <div class="activity-content">
-                                <p>Goal & Scope defined</p>
-                                <span class="activity-time">Yesterday</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon">👤</div>
-                            <div class="activity-content">
-                                <p>Rahul Bose shortlisted</p>
-                                <span class="activity-time">2 days ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Shortlisted Architects Screen -->
-    <div id="shortlisted-architects" class="screen">
-        <div class="shortlisted-container">
-            <div class="status-bar">
-                <span class="time">9:41</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            
-            <div class="shortlisted-header">
-                <button class="back-btn" onclick="showScreen('find-professionals')">&lt;</button>
-                <h2>Shortlisted Architects</h2>
-                <div class="header-count">(3)</div>
-            </div>
-            
-            <div class="shortlisted-content">
-                <div class="shortlisted-card">
-                    <div class="architect-info">
-                        <img src="https://via.placeholder.com/60x60?text=RB" alt="Rahul Bose" class="architect-avatar">
-                        <div class="architect-details">
-                            <h4>Rahul Bose</h4>
-                            <p>📍 Mumbai • ⭐ 4.9</p>
-                            <p>₹80K-₹5L</p>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn btn-outline" onclick="removeFromShortlist('rahul-bose')">Remove</button>
-                        <button class="btn btn-primary" onclick="contactArchitect('rahul-bose')">Contact</button>
-                    </div>
-                </div>
-                
-                <div class="shortlisted-card">
-                    <div class="architect-info">
-                        <img src="https://via.placeholder.com/60x60?text=AS" alt="Ari Sejal" class="architect-avatar">
-                        <div class="architect-details">
-                            <h4>Ari Sejal</h4>
-                            <p>📍 Mumbai • ⭐ 4.8</p>
-                            <p>₹60K-₹4L</p>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn btn-outline" onclick="removeFromShortlist('ari-sejal')">Remove</button>
-                        <button class="btn btn-primary" onclick="contactArchitect('ari-sejal')">Contact</button>
-                    </div>
-                </div>
-                
-                <div class="shortlisted-card">
-                    <div class="architect-info">
-                        <img src="https://via.placeholder.com/60x60?text=SP" alt="Shrikanth Patil" class="architect-avatar">
-                        <div class="architect-details">
-                            <h4>Shrikanth Patil</h4>
-                            <p>📍 Pune • ⭐ 4.7</p>
-                            <p>₹70K-₹3L</p>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <button class="btn btn-outline" onclick="removeFromShortlist('shrikanth-patil')">Remove</button>
-                        <button class="btn btn-primary" onclick="contactArchitect('shrikanth-patil')">Contact</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="shortlisted-actions">
-                <button class="btn btn-secondary" onclick="showScreen('find-professionals')">Find More</button>
-                <button class="btn btn-primary" onclick="compareArchitects()">Compare All</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Chat Screen -->
-    <div id="chat" class="screen">
-        <div class="chat-container">
             <div class="status-bar">
                 <span class="time">12:30</span>
                 <div class="status-icons">
@@ -1248,29 +462,182 @@
                     <span>🔋</span>
                 </div>
             </div>
-            <div class="header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>AI Assistant</h2>
+            
+            <div class="dashboard-header">
+                <div class="welcome-message">
+                    <h2>Hello <span class="user-name" id="userName">User</span>! 👋</h2>
+                    <p>Ready to continue your home journey?</p>
+                </div>
                 <div class="header-icons">
-                    <span class="icon">⚙️</span>
+                    <span class="icon" onclick="toggleSearch()" id="search-toggle">🔍</span>
+                </div>
+            </div>
+
+            <div class="search-section" id="search-section" style="display: none;">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search for projects, experts, or ask AI..." id="search-input">
+                    <span class="search-icon" onclick="performSearch()">🔍</span>
+                    <span class="mic-icon" onclick="startVoiceSearch()">🎤</span>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <div class="project-header">
+                    <h3 id="projectName">Your Project</h3>
+                    <span class="edit-icon" onclick="editProjectName()">✏️</span>
+                </div>
+                
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Your Home" class="home-image">
+                </div>
+                
+                <div class="project-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 15%"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span>15% Complete</span>
+                        <span>Planning Phase</span>
+                    </div>
+                </div>
+                
+                <div class="project-stats">
+                    <div class="stat-card">
+                        <h4>Budget</h4>
+                        <div class="budget-chart">💰</div>
+                        <span id="projectBudget">₹25L</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Timeline</h4>
+                        <div class="days">120</div>
+                        <span>Days Est.</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Team</h4>
+                        <div class="days">0</div>
+                        <span>Members</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary phase-btn" onclick="showGoalAndScope()">Go to Phase 1</button>
+            </div>
+
+            <div class="quick-tools-section">
+                <h3>Quick Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card" onclick="showScreen('propertyAuditScreen')">
+                        <div class="tool-icon">📋</div>
+                        <span>Property Audit</span>
+                    </div>
+                    <div class="tool-card" onclick="showScreen('architectSearchScreen')">
+                        <div class="tool-icon">👥</div>
+                        <span>Find Experts</span>
+                    </div>
+                    <div class="tool-card" onclick="showAIChatBot()">
+                        <div class="tool-icon">🤖</div>
+                        <span>AI Assistant</span>
+                    </div>
+                    <div class="tool-card" onclick="showScreen('projectTrackingScreen')">
+                        <div class="tool-icon">📊</div>
+                        <span>Track Progress</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-nav">
+                <button class="nav-btn active" onclick="showScreen('dashboard')">
+                    <div class="icon">🏠</div>
+                    <span>Home</span>
+                </button>
+                <button class="nav-btn" onclick="showScreen('projectTrackingScreen')">
+                    <div class="icon">📋</div>
+                    <span>Projects</span>
+                </button>
+                <button class="nav-btn" onclick="showScreen('architectSearchScreen')">
+                    <div class="icon">👥</div>
+                    <span>Experts</span>
+                </button>
+                <button class="nav-btn" onclick="showAIChatBot()">
+                    <div class="icon">🤖</div>
+                    <span>AI Chat</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: Goal & Scope Screen -->
+    <div id="goalAndScopeScreen" class="screen">
+        <div class="goal-scope-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
                 </div>
             </div>
             
-            <div class="chat-messages" id="chat-messages">
-                <!-- Chat messages will be dynamically added here -->
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
+                <h2>Phase 1: Goal & Scope</h2>
             </div>
-            
-            <div class="chat-input-section">
-                <div class="chat-input-container">
-                    <input type="text" class="chat-input" id="chat-input" placeholder="Ask about your home project...">
-                    <button class="send-btn" id="send-message">📤</button>
+
+            <div class="goal-scope-content">
+                <div class="phase-intro">
+                    <h2>✅ Define Goal and Scope</h2>
+                    <p>Based on your questionnaire responses, here's your project summary:</p>
+                </div>
+
+                <div class="project-summary">
+                    <div class="summary-card">
+                        <h3>📋 Project Overview</h3>
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <span class="label">Home Name:</span>
+                                <span class="value" id="projectNameGoal">Dream Villa</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Type:</span>
+                                <span class="value" id="homeTypeGoal">Villa</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Size:</span>
+                                <span class="value" id="homeSizeGoal">1200 sq ft</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Bedrooms:</span>
+                                <span class="value" id="bedroomsGoal">3 BHK</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Bathrooms:</span>
+                                <span class="value" id="bathroomsGoal">2</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Location:</span>
+                                <span class="value" id="locationGoal">Mumbai</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Budget:</span>
+                                <span class="value" id="budgetGoal">₹25,00,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3>🎯 Next Steps</h3>
+                        <p>Now that your goals are clear, let's move to the property audit phase where you'll document your space with photos.</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="showScreen('dashboard')">Back to Dashboard</button>
+                    <button class="btn btn-primary" onclick="showScreen('propertyAuditScreen')">Start Property Audit</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Pathway Screen -->
-    <div id="pathway" class="screen">
+    <!-- Property Audit Screen -->
+    <div id="propertyAuditScreen" class="screen">
         <div class="pathway-container">
             <div class="status-bar">
                 <span class="time">12:30</span>
@@ -1279,308 +646,288 @@
                     <span>🔋</span>
                 </div>
             </div>
+            
             <div class="pathway-header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>Home Building Pathway</h2>
+                <button class="back-btn" onclick="showScreen('goalAndScopeScreen')">&lt;</button>
+                <h2>Property Audit</h2>
+                <span class="icon" onclick="showAuditHelp()">❓</span>
             </div>
-            
+
             <div class="pathway-phases">
-                <div class="phase-tabs">
-                    <button class="phase-tab active">Planning</button>
-                    <button class="phase-tab">Structure</button>
-                    <button class="phase-tab">Systems</button>
-                    <button class="phase-tab">Finishing</button>
-                </div>
-                
-                <div class="phase-content">
-                    <div class="phase-info">
-                        <h3>Planning Phase</h3>
-                        <p>Foundation of your dream home starts here. Get all approvals, finalize designs, and prepare for construction.</p>
-                        
-                        <div class="phase-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 60%"></div>
-                            </div>
-                            <p class="progress-text">60% Complete - 3 of 5 steps done</p>
-                        </div>
-                    </div>
-                    
-                    <div class="pathway-steps">
-                        <div class="step completed">
-                            <div class="step-marker">✓</div>
-                            <div class="step-content">
-                                <h4>Site Selection & Purchase</h4>
-                                <p>Choose and finalize your plot location</p>
-                                <div class="step-status">Completed</div>
-                            </div>
-                        </div>
-                        
-                        <div class="step completed">
-                            <div class="step-marker">✓</div>
-                            <div class="step-content">
-                                <h4>Architect Selection</h4>
-                                <p>Find and hire qualified architect</p>
-                                <div class="step-status">Completed</div>
-                            </div>
-                        </div>
-                        
-                        <div class="step completed">
-                            <div class="step-marker">✓</div>
-                            <div class="step-content">
-                                <h4>Design & Planning</h4>
-                                <p>Create house plans and get approvals</p>
-                                <div class="step-status">Completed</div>
-                            </div>
-                        </div>
-                        
-                        <div class="step pending">
-                            <div class="step-marker">4</div>
-                            <div class="step-content">
-                                <h4>Permits & Approvals</h4>
-                                <p>Get building permits and clearances</p>
-                                <div class="step-status">In Progress</div>
-                            </div>
-                        </div>
-                        
-                        <div class="step">
-                            <div class="step-marker">5</div>
-                            <div class="step-content">
-                                <h4>Contractor Selection</h4>
-                                <p>Hire reliable construction contractor</p>
-                                <div class="step-status">Pending</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Professionals Screen -->
-    <div id="professionals-screen" class="screen">
-        <div class="professionals-container">
-            <div class="status-bar">
-                <span class="time">12:30</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            <div class="header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>Find Professionals</h2>
-                <div class="header-icons">
-                    <span class="icon">🔍</span>
-                </div>
-            </div>
-            
-            <div class="professionals-filter">
-                <div class="filter-tabs">
-                    <button class="filter-tab active">All</button>
-                    <button class="filter-tab">Architects</button>
-                    <button class="filter-tab">Carpenters</button>
-                    <button class="filter-tab">Plumbers</button>
-                    <button class="filter-tab">Painters</button>
-                    <button class="filter-tab">Electricians</button>
-                </div>
-            </div>
-            
-            <div class="professionals-list" id="professionals-grid">
-                <!-- Professional cards will be dynamically generated here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Architect Details Screen -->
-    <div id="architect-details" class="screen">
-        <div class="architect-details-container">
-            <div class="status-bar">
-                <span class="time">12:30</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            <div class="header">
-                <button class="back-btn" onclick="showScreen('professionals-screen')">&lt;</button>
-                <h2>Architect Details</h2>
-                <div class="header-icons">
-                    <span class="icon">⭐</span>
-                </div>
-            </div>
-            
-            <div class="architect-profile">
-                <div class="architect-header">
-                    <div class="architect-avatar">👩‍💼</div>
-                    <div class="architect-info">
-                        <h3 class="architect-name">Priya Sharma</h3>
-                        <p>Senior Architect</p>
-                        <div class="rating">⭐ 4.9 (12 reviews)</div>
-                    </div>
-                </div>
-                
-                <div class="architect-details-content">
-                    <div class="detail-section">
-                        <h4>About</h4>
-                        <p>Specialized in residential design with 8+ years of experience. Expert in modern and sustainable architecture.</p>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <h4>Specializations</h4>
-                        <div class="specializations">
-                            <span class="spec-tag">Residential Design</span>
-                            <span class="spec-tag">Modern Architecture</span>
-                            <span class="spec-tag">Sustainable Design</span>
-                        </div>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <h4>Portfolio</h4>
-                        <div class="portfolio-grid">
-                            <div class="portfolio-item">Modern Villa</div>
-                            <div class="portfolio-item">Traditional Bungalow</div>
-                            <div class="portfolio-item">Eco-friendly Apartment</div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-section">
-                        <button class="btn btn-primary" onclick="contactProfessional('arch_001')">📞 Contact Architect</button>
-                        <button class="btn btn-secondary">💬 Send Message</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Photo Upload Screen -->
-    <div id="photo-upload" class="screen">
-        <div class="photo-upload-container">
-            <div class="status-bar">
-                <span class="time">12:30</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            <div class="header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>Upload Photos</h2>
-                <div class="header-icons">
-                    <span class="icon" onclick="capturePhoto()">📷</span>
-                </div>
-            </div>
-            
-            <div class="upload-content">
-                <div class="upload-instructions">
-                    <h3>Document Your Progress</h3>
-                    <p>Upload photos of your construction site, materials, or completed work to track progress.</p>
-                </div>
-                
-                <div class="photo-upload-area">
-                    <div class="upload-placeholder">
-                        <div class="upload-icon">📤</div>
-                        <p>Tap to select photos</p>
-                        <p>or drag and drop here</p>
-                    </div>
-                    <input type="file" id="photo-input" accept="image/*" multiple style="display: none;">
-                </div>
-                
-                <div class="camera-options">
-                    <button class="btn btn-outline" onclick="capturePhoto()">📷 Take Photo</button>
-                    <button class="btn btn-outline" onclick="selectFromGallery()">🖼️ Select from Gallery</button>
-                </div>
-                
-                <div class="photo-status">
-                    <span>0 photos uploaded</span>
-                </div>
-                
-                <div class="photo-grid">
-                    <!-- Uploaded photos will appear here -->
-                </div>
-                
-                <div class="upload-actions">
-                    <button class="btn btn-primary">Save Photos</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Site Survey Screen -->
-    <div id="site-survey" class="screen">
-        <div class="site-survey-container">
-            <div class="status-bar">
-                <span class="time">12:30</span>
-                <div class="status-icons">
-                    <span>📶</span>
-                    <span>🔋</span>
-                </div>
-            </div>
-            <div class="header">
-                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
-                <h2>Site Survey</h2>
-                <div class="header-icons">
-                    <span class="icon">📋</span>
-                </div>
-            </div>
-            
-            <div class="survey-content">
-                <div class="survey-intro">
-                    <h3>Property Audit & Survey</h3>
-                    <p>Document your site conditions, take measurements, and record important details for planning.</p>
-                </div>
-                
                 <div class="audit-steps">
                     <div class="audit-step active">
-                        <div>📐</div>
-                        <span>Measure</span>
+                        <span>📸</span>
+                        <small>Photos</small>
                     </div>
                     <div class="audit-step">
-                        <div>📷</div>
-                        <span>Photo</span>
+                        <span>📝</span>
+                        <small>Notes</small>
                     </div>
                     <div class="audit-step">
-                        <div>📝</div>
-                        <span>Notes</span>
-                    </div>
-                    <div class="audit-step">
-                        <div>✅</div>
-                        <span>Review</span>
+                        <span>✅</span>
+                        <small>Review</small>
                     </div>
                 </div>
-                
+
                 <div class="people-involved">
-                    <h4>People Involved</h4>
+                    <h4>👥 People Involved</h4>
                     <div class="people-chips">
-                        <div class="person-chip">You</div>
-                        <div class="person-chip">+ Add Family</div>
-                        <div class="person-chip">+ Add Professional</div>
+                        <span class="person-chip">You</span>
+                        <span class="person-chip">+ Family Member</span>
                     </div>
-                    <div class="timeline">Estimated time: 2-3 hours</div>
+                    <div class="timeline">⏱️ Estimated time: 30-45 minutes</div>
                 </div>
-                
+
                 <div class="conduct-photos">
-                    <h3>Site Documentation</h3>
-                    <p>Take photos of current site conditions, existing structures, utilities, and surrounding areas. This helps architects and contractors understand your space better.</p>
+                    <h3>📸 Document Your Space</h3>
+                    <p>Take photos of each room and area to help architects understand your current space and requirements.</p>
                     
-                    <div class="photo-categories">
-                        <button class="btn btn-outline">📐 Plot Boundaries</button>
-                        <button class="btn btn-outline">🏠 Existing Structures</button>
-                        <button class="btn btn-outline">🚰 Utilities</button>
-                        <button class="btn btn-outline">🌳 Surroundings</button>
+                    <div class="photo-upload-area">
+                        <div class="upload-placeholder" onclick="capturePhoto()">
+                            <div class="upload-icon">📷</div>
+                            <p><strong>Tap to take a photo</strong></p>
+                            <p>or drag and drop images here</p>
+                        </div>
+                        <input type="file" id="camera-input" accept="image/*" capture="camera" style="display: none;" onchange="handleFileUpload(this)">
+                        <input type="file" id="gallery-input" accept="image/*" multiple style="display: none;" onchange="handleFileUpload(this)">
                     </div>
-                </div>
-                
-                <div class="survey-actions">
-                    <button class="btn btn-primary" onclick="nextSurveyStep()">Start Survey</button>
-                    <button class="btn btn-secondary" onclick="showScreen('dashboard')">Save & Continue Later</button>
+                    
+                    <div class="photo-actions">
+                        <button class="btn btn-outline" onclick="capturePhoto()">📷 Camera</button>
+                        <button class="btn btn-outline" onclick="selectFromGallery()">🖼️ Gallery</button>
+                    </div>
+                    
+                    <div class="photo-status">
+                        <span id="photo-count">0 photos added</span>
+                        <span class="photo-required">Minimum 5 photos required</span>
+                    </div>
+                    
+                    <div class="photo-grid" id="photo-grid">
+                        <!-- Photos will be added here dynamically -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Hidden File Inputs for Camera -->
-    <input type="file" id="camera-input" accept="image/*" capture="camera" style="display: none;">
-    <input type="file" id="gallery-input" accept="image/*" style="display: none;">
+    <!-- Architect Search Screen -->
+    <div id="architectSearchScreen" class="screen">
+        <div class="search-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('propertyAuditScreen')">&lt;</button>
+                <h2>Find Professionals</h2>
+                <span class="icon" onclick="toggleFilters()">⚙️</span>
+            </div>
+
+            <div class="search-filters" id="search-filters" style="display: none;">
+                <div class="filter-section">
+                    <h4>Professional Type</h4>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-type="architects" onclick="filterByType('architects')">Architects</button>
+                        <button class="filter-btn" data-type="carpenters" onclick="filterByType('carpenters')">Carpenters</button>
+                        <button class="filter-btn" data-type="plumbers" onclick="filterByType('plumbers')">Plumbers</button>
+                        <button class="filter-btn" data-type="painters" onclick="filterByType('painters')">Painters</button>
+                        <button class="filter-btn" data-type="electricians" onclick="filterByType('electricians')">Electricians</button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Budget Range</h4>
+                    <select class="filter-select" id="budget-filter" onchange="applyFilters()">
+                        <option value="">All Budgets</option>
+                        <option value="0-50k">Under ₹50k</option>
+                        <option value="50k-150k">₹50k - ₹150k</option>
+                        <option value="150k-300k">₹150k - ₹300k</option>
+                        <option value="300k+">₹300k+</option>
+                    </select>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Location</h4>
+                    <select class="filter-select" id="location-filter" onchange="applyFilters()">
+                        <option value="">All Locations</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="professionals-list" id="professionals-list">
+                <!-- Professional cards will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Tracking Screen -->
+    <div id="projectTrackingScreen" class="screen">
+        <div class="tracking-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="header">
+                <button class="back-btn" onclick="showScreen('dashboard')">&lt;</button>
+                <h2>Project Tracking</h2>
+                <span class="icon" onclick="addNewTask()">➕</span>
+            </div>
+
+            <div class="tracking-content">
+                <div class="project-overview">
+                    <h3 id="trackingProjectName">Project Overview</h3>
+                    <div class="overview-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">15%</span>
+                            <span class="stat-label">Complete</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">₹3.75L</span>
+                            <span class="stat-label">Spent</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">105</span>
+                            <span class="stat-label">Days Left</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-section">
+                    <h4>👥 Team Members</h4>
+                    <div class="team-members" id="team-members">
+                        <div class="team-member">
+                            <div class="member-avatar">👤</div>
+                            <div class="member-info">
+                                <div class="member-name">You (Owner)</div>
+                                <div class="member-role">Project Lead</div>
+                            </div>
+                        </div>
+                        <!-- Team members will be added here -->
+                    </div>
+                    <button class="btn btn-outline" onclick="inviteTeamMember()">+ Invite Team Member</button>
+                </div>
+
+                <div class="tasks-section">
+                    <h4>📋 Tasks & Milestones</h4>
+                    <div class="tasks-list" id="tasks-list">
+                        <div class="task-item completed">
+                            <div class="task-checkbox">✅</div>
+                            <div class="task-content">
+                                <div class="task-title">Project Planning</div>
+                                <div class="task-date">Completed 2 days ago</div>
+                            </div>
+                        </div>
+                        <div class="task-item active">
+                            <div class="task-checkbox">🔄</div>
+                            <div class="task-content">
+                                <div class="task-title">Property Audit</div>
+                                <div class="task-date">In progress</div>
+                            </div>
+                        </div>
+                        <div class="task-item pending">
+                            <div class="task-checkbox">⏳</div>
+                            <div class="task-content">
+                                <div class="task-title">Find Architect</div>
+                                <div class="task-date">Starting soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="budget-tracking">
+                    <h4>💰 Budget Tracking</h4>
+                    <div class="budget-chart">
+                        <div class="budget-bar">
+                            <div class="budget-used" style="width: 15%"></div>
+                        </div>
+                        <div class="budget-info">
+                            <span>₹3,75,000 used of ₹25,00,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chat Bot Screen -->
+    <div id="aiChatScreen" class="screen">
+        <div class="chat-container">
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+            
+            <div class="chat-header">
+                <button class="back-btn" onclick="closeChatBot()">&lt;</button>
+                <div class="bot-info">
+                    <div class="bot-avatar">🤖</div>
+                    <div class="bot-details">
+                        <h3>Homii AI Assistant</h3>
+                        <span class="bot-status">Online • Ready to help</span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <span class="icon" onclick="toggleVoiceMode()">🎤</span>
+                    <span class="icon" onclick="clearChat()">🗑️</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hello! I'm your Homii AI Assistant. I'm here to help you plan, build, and connect with the right professionals for your home project.</p>
+                        <p>You can ask me about:</p>
+                        <ul>
+                            <li>🏗️ Construction planning & budgeting</li>
+                            <li>🎨 Design ideas & room layouts</li>
+                            <li>👷 Finding architects, carpenters, painters</li>
+                            <li>📋 Project management & timelines</li>
+                            <li>💡 Home improvement suggestions</li>
+                        </ul>
+                        <p>What would you like to know?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="voice-mode" id="voice-mode" style="display: none;">
+                    <div class="voice-indicator">
+                        <div class="voice-wave"></div>
+                        <p>Listening... Speak in Hindi or English</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="stopVoiceMode()">Stop</button>
+                </div>
+                
+                <div class="chat-input-container" id="chat-input-container">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Ask anything about your home project..." onkeypress="handleChatKeyPress(event)">
+                    <button class="voice-btn" onclick="startVoiceInput()" title="Voice input (Hindi/English)">🎤</button>
+                    <button class="send-btn" onclick="sendMessage()" title="Send message">➤</button>
+                </div>
+                
+                <div class="quick-suggestions">
+                    <button class="suggestion-btn" onclick="askQuickQuestion('How much will it cost to renovate my kitchen?')">💰 Kitchen renovation cost?</button>
+                    <button class="suggestion-btn" onclick="askQuickQuestion('I need a good architect in Mumbai')">👷 Find architect</button>
+                    <button class="suggestion-btn" onclick="askQuickQuestion('What are the phases of home construction?')">🏗️ Construction phases</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
